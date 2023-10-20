@@ -20,7 +20,7 @@ public class Login_Activity extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login_Activity.this, Register_Activity.class);
+                Intent intent = new Intent(Login_Activity.this, TeamsViewPlayer.class);
                 startActivity(intent);
             }
         });
