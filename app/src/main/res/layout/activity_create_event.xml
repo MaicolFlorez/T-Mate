@@ -30,7 +30,7 @@
             android:layout_width="55dp"
             android:layout_height="50dp"
             android:layout_weight="0"
-            android:src="@tools:sample/avatars" />
+            android:src="@drawable/ic_launcher_foreground" />
     </LinearLayout>
 
     <LinearLayout
@@ -76,7 +76,7 @@
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:gravity="start|top"
-            android:hint="Descipción"
+            android:hint="Descripción"
             android:inputType="textMultiLine" />
 
         <Button
@@ -109,7 +109,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="15dp"
                 android:layout_weight="0"
-                android:src="@tools:sample/avatars" />
+                android:src="@drawable/calendario" />
 
             <ImageView
                 android:id="@+id/img_trainings_foot"
@@ -118,7 +118,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="15dp"
                 android:layout_weight="0"
-                android:src="@tools:sample/avatars" />
+                android:src="@drawable/pesa" />
 
             <ImageView
                 android:id="@+id/img_home_foot"
@@ -127,7 +127,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="15dp"
                 android:layout_weight="0"
-                android:src="@tools:sample/avatars" />
+                android:src="@drawable/casa_de_perro" />
 
             <ImageView
                 android:id="@+id/img_myteam_foot"
@@ -136,7 +136,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="15dp"
                 android:layout_weight="0"
-                android:src="@tools:sample/avatars" />
+                android:src="@drawable/grupo" />
 
             <ImageView
                 android:id="@+id/img_profile_foot"
@@ -145,7 +145,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="15dp"
                 android:layout_weight="0"
-                android:src="@tools:sample/avatars" />
+                android:src="@drawable/usuario" />
         </TableRow>
 
         <TableRow
