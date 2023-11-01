@@ -13,10 +13,10 @@
         android:theme="@style/Theme.TMate"
         tools:targetApi="31">
         <activity
-            android:name=".TeamViewCoach"
+            android:name=".TrainingDescriptionActivity"
             android:exported="false" />
         <activity
-            android:name=".TeamsViewPlayer"
+            android:name=".CreateTrainingActivity"
             android:exported="false" />
         <activity
             android:name=".Splash_Activity"

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">T-Mate</string>
+    <string name="btn_eventos">Eventos</string>
+    <string name="btn_ejercicios">Ejercicios</string>
+    <string name="btn_menu">Menú</string>
+    <string name="btn_equipo">Equipo</string>
+    <string name="btn_perfil">Perfil</string>
 </resources>
