@@ -42,6 +42,7 @@ public class TeamsViewPlayer extends AppCompatActivity {
     public void initP(){
         elements = new ArrayList<>();
         elements.add(new ListElement("#775447", "Sos", "Futbol", "Directivo"));
+        elements.add(new ListElement("#775227", "Mogus", "Fuchibol", "Crewmate"));
 
         ListAdapter listAdapter = new ListAdapter(elements,this);
         RecyclerView recyclerView =findViewById(R.id.listTeamsView);

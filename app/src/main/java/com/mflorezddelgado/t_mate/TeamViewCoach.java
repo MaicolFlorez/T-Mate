@@ -52,6 +52,7 @@ public class TeamViewCoach extends AppCompatActivity {
     public void initC(){
         elements = new ArrayList<>();
         elements.add(new ListElement("#775447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new ListElement("#766447", "Mogus", "Fuchibol", "Crewmate"));
 
         ListAdapter listAdapter = new ListAdapter(elements,this);
         RecyclerView recyclerView =findViewById(R.id.listTeamsView);
