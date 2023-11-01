@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.Firebase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -27,6 +26,7 @@ public class CreateTrainingActivity extends AppCompatActivity {
         etDescripcion = findViewById(R.id.ed_text_descripcion);
         etCaracteristicas = findViewById(R.id.ed_text_caracteristicas);
     }
+
     public void clickGuardarEjercicio(View view){
         Entrenamiento nuevoEntrenamiento = new Entrenamiento();
         nuevoEntrenamiento.setTitulo(etTitulo.getText().toString());
@@ -44,7 +44,5 @@ public class CreateTrainingActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
-
 }
