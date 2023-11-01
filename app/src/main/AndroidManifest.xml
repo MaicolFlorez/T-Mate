@@ -36,6 +36,12 @@
         <activity
             android:name=".Main_Activity"
             android:exported="false" />
+        <activity
+            android:name=".TeamViewCoach"
+            android:exported="false" />
+        <activity
+            android:name=".TeamsViewPlayer"
+            android:exported="false" />
     </application>
 
 </manifest>

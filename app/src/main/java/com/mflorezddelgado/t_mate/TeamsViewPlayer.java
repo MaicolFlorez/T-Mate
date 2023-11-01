@@ -1,6 +1,8 @@
 package com.mflorezddelgado.t_mate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TeamsViewPlayer extends AppCompatActivity {
 
@@ -19,7 +24,7 @@ public class TeamsViewPlayer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teams_player_view);
 
-        init();
+        initP();
 
         ImageButton imgUnirse = findViewById(R.id.imgbtn_unirse);
 
@@ -29,8 +34,19 @@ public class TeamsViewPlayer extends AppCompatActivity {
         imgUnirse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                popupWindow.showAtLocation(view, Gravity.CENTER_HORIZONTAL, 0, 0);
+                popupWindow.showAtLocation(view, Gravity.TOP, 0, 250);
             }
         });
+    }
+
+    public void initP(){
+        elements = new ArrayList<>();
+        elements.add(new ListElement("#775447", "Sos", "Futbol", "Directivo"));
+
+        ListAdapter listAdapter = new ListAdapter(elements,this);
+        RecyclerView recyclerView =findViewById(R.id.listTeamsView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(listAdapter);
     }
 }
