@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "610534677368",
+    "project_id": "t-mate-42b26",
+    "storage_bucket": "t-mate-42b26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610534677368:android:528c23598727aa6e66c68d",
+        "android_client_info": {
+          "package_name": "com.mflorezddelgado.t_mate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-bDjt-6mx1yqwxfSnMU4yG6AHkSRsGYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
