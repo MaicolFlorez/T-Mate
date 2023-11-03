@@ -78,13 +78,15 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/imgbtn_evento"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@android:drawable/btn_star" />
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/btn_eventos"
+                    android:src="@drawable/calendario"
+                    android:scaleType="fitXY"/>
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textevento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -98,13 +100,15 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/imgbtn_ejercicio"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@android:drawable/btn_star" />
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/btn_ejercicios"
+                    android:src="@drawable/pesa"
+                    android:scaleType="fitXY"/>
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textejercicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -118,13 +122,14 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/imgbtn_menu"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/btn_menu"
                     android:src="@android:drawable/btn_star" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textmenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -138,13 +143,15 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/imgbtn_equipo"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@android:drawable/btn_star" />
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/btn_equipo"
+                    android:src="@android:drawable/btn_star"
+                    android:scaleType="fitXY"/>
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textequipo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -158,13 +165,14 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/imgbtn_perfil"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/btn_perfil"
                     android:src="@android:drawable/btn_star" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textperfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
