@@ -1,12 +1,12 @@
 package com.mflorezddelgado.t_mate;
 
-public class ListElement {
+public class Teams {
     public String color;
     public String name;
     public String desc;
     public String member;
 
-    public ListElement(String color, String name, String desc, String member) {
+    public Teams(String color, String name, String desc, String member) {
         this.color = color;
         this.name = name;
         this.desc = desc;

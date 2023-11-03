@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 
 import java.util.ArrayList;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public class TeamViewCoach extends AppCompatActivity {
 
-    List<ListElement> elements;
+    List<Teams> elements;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,11 @@ public class TeamViewCoach extends AppCompatActivity {
 
         Button btnCrear = findViewById(R.id.btn_crear);
         Button btnUnirse = findViewById(R.id.btn_unirse);
+        ImageView imgGoEvents = findViewById(R.id.img_events_foot);
+        ImageView imgGoExercises = findViewById(R.id.img_trainings_foot);
+        ImageView imgGoMenu = findViewById(R.id.img_home_foot);
+        ImageView imgGoTeam = findViewById(R.id.img_myteam_foot);
+        ImageView imgGoProfile = findViewById(R.id.img_profile_foot);
 
         View popupViewUnirse = getLayoutInflater().inflate(R.layout.popup_layout_unirse, null);
         PopupWindow popupWindowUnirse = new PopupWindow(popupViewUnirse, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
@@ -47,12 +54,53 @@ public class TeamViewCoach extends AppCompatActivity {
                 popupWindowCrear.showAtLocation(v, Gravity.TOP, 0, 250);
             }
         });
+
+        imgGoEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TeamViewCoach.this, EventsActivity.class));
+            }
+        });
+
+        imgGoExercises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TeamViewCoach.this, TrainingsActivity.class));
+            }
+        });
+
+        imgGoMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TeamViewCoach.this, TeamViewCoach.class));
+            }
+        });
+
+        imgGoTeam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TeamViewCoach.this, TeamsViewPlayer.class));
+            }
+        });
+
+        imgGoProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TeamViewCoach.this, ProfileActivity.class));
+            }
+        });
     }
 
     public void initC(){
         elements = new ArrayList<>();
-        elements.add(new ListElement("#775447", "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new ListElement("#766447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#775447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#766447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#775447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#766447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#775447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#766447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#775447", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams("#766447", "Mogus", "Fuchibol", "Crewmate"));
 
         ListAdapter listAdapter = new ListAdapter(elements,this);
         RecyclerView recyclerView =findViewById(R.id.listTeamsView);
