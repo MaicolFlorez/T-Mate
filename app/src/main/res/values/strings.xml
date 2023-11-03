@@ -5,4 +5,5 @@
     <string name="btn_menu">Menú</string>
     <string name="btn_equipo">Equipo</string>
     <string name="btn_perfil">Perfil</string>
+    <string name="btn_unirse">Unirse</string>
 </resources>
