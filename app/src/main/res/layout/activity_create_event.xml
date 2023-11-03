@@ -159,7 +159,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Eventos" />
+                android:text="@string/btn_eventos" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -168,7 +168,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Ejercicios" />
+                android:text="@string/btn_ejercicios" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -177,7 +177,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Menú" />
+                android:text="@string/btn_menu" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -186,7 +186,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Equipo" />
+                android:text="@string/btn_equipo" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -195,7 +195,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Perfíl" />
+                android:text="@string/btn_perfil" />
         </TableRow>
     </TableLayout>
 

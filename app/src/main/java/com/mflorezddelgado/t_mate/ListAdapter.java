@@ -14,11 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
-    private List<ListElement> mData;
+    private List<Teams> mData;
     private LayoutInflater mInflater;
     private Context context;
 
-    public ListAdapter(List<ListElement> itemList, Context context){
+    public ListAdapter(List<Teams> itemList, Context context){
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = itemList;
@@ -38,7 +38,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
         holder.bindData(mData.get(position));
     }
 
-    public void setItems(List<ListElement> items){ mData = items;}
+    public void setItems(List<Teams> items){ mData = items;}
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
@@ -52,7 +52,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
             member = itemView.findViewById(R.id.memberTeam);
         }
 
-        void bindData(final ListElement item){
+        void bindData(final Teams item){
             iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
             name.setText(item.getName());
             desc.setText(item.getDesc());
