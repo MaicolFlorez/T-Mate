@@ -3,9 +3,11 @@ package com.mflorezddelgado.t_mate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,6 +27,47 @@ public class CreateTrainingActivity extends AppCompatActivity {
         etTitulo = findViewById(R.id.ed_text_titulo);
         etDescripcion = findViewById(R.id.ed_text_descripcion);
         etCaracteristicas = findViewById(R.id.ed_text_caracteristicas);
+
+        ImageView imgGoToEvents = findViewById(R.id.img_events_foot);
+        ImageView imgGoToTraining = findViewById(R.id.img_trainings_foot);
+        ImageView imgGoToMenu = findViewById(R.id.img_home_foot);
+        ImageView imgGoToTeam = findViewById(R.id.img_myteam_foot);
+        ImageView imgGoToProfile = findViewById(R.id.img_profile_foot);
+
+        imgGoToEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CreateTrainingActivity.this, EventsActivity.class));
+            }
+        });
+        imgGoToTraining.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CreateTrainingActivity.this, TrainingsActivity.class));
+            }
+        });
+
+        imgGoToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CreateTrainingActivity.this, TeamViewCoach.class));
+            }
+        });
+
+        imgGoToTeam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CreateTrainingActivity.this, TeamsViewPlayer.class));
+            }
+        });
+
+        imgGoToProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CreateTrainingActivity.this, ProfileActivity.class));
+            }
+        });
+
     }
 
     public void clickGuardarEjercicio(View view){
