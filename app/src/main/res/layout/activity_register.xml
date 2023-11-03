@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:text="Nombre"
+            android:textColor="@color/fourth"
             android:textStyle="bold" />
 
         <EditText
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:text="Apellidos"
+            android:textColor="@color/fourth"
             android:textStyle="bold" />
 
         <EditText
@@ -52,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edad"
+            android:textColor="@color/fourth"
             android:textStyle="bold" />
 
         <EditText
@@ -66,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Correo Eléctronico"
+            android:textColor="@color/fourth"
             android:textStyle="bold" />
 
         <EditText
@@ -80,6 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contraseña"
+            android:textColor="@color/fourth"
             android:textStyle="bold" />
 
         <EditText
@@ -94,6 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Confirmar Contraseña"
+            android:textColor="@color/fourth"
             android:textStyle="bold" />
 
         <EditText
@@ -111,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:backgroundTint="#F69700"
+            android:backgroundTint="@color/fifth"
             android:text="Registrarse"
             android:textColor="#FFFFFF" />
 
@@ -135,6 +141,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="28dp"
         android:text="Register"
+        android:textColor="@color/fifth"
         android:textSize="48dp"
         app:layout_constraintStart_toEndOf="@+id/btn_backr"
         app:layout_constraintTop_toTopOf="parent" />

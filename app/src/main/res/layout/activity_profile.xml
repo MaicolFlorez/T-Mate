@@ -23,6 +23,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Perfíl"
+            android:textColor="@color/fifth"
             android:textSize="34sp" />
 
         <ImageView
@@ -36,6 +37,7 @@
     <LinearLayout
         android:layout_width="406dp"
         android:layout_height="557dp"
+        android:backgroundTint="@color/first"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
@@ -56,6 +58,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
             android:text="Nombre"
+            android:textColor="@color/fifth"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -69,7 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="8dp"
-                android:text="Edad" />
+                android:text="Edad"
+                android:textColor="@color/fourth" />
 
             <TextView
                 android:id="@+id/tv_profile_height"
@@ -77,7 +81,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="8dp"
-                android:text="Estatura" />
+                android:text="Estatura"
+                android:textColor="@color/fourth" />
 
             <TextView
                 android:id="@+id/tv_profile_weight"
@@ -85,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="8dp"
-                android:text="Peso" />
+                android:text="Peso"
+                android:textColor="@color/fourth" />
 
             <TextView
                 android:id="@+id/tv_profile_address"
@@ -93,8 +99,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="8dp"
-                android:text="Dirección" />
+                android:text="Dirección"
+                android:textColor="@color/fourth" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_cerrarsesion"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100px"
+            android:text="Cerrar sesion" />
 
     </LinearLayout>
 
