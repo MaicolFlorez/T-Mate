@@ -24,13 +24,13 @@ public class ProfileActivity extends AppCompatActivity {
         imgGoToEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProfileActivity.this, EventsActivity.class));
+                startActivity(new Intent(ProfileActivity.this, ProfileActivity.class));
             }
         });
         imgGoToTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProfileActivity.this, TrainingsActivity.class));
+                startActivity(new Intent(ProfileActivity.this, ProfileActivity.class));
             }
         });
 
