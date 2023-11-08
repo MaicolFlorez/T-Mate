@@ -1,24 +1,26 @@
 package com.mflorezddelgado.t_mate;
 
+import android.graphics.drawable.Drawable;
+
 public class Teams {
-    public String color;
+    public int image;
     public String name;
     public String desc;
     public String member;
 
-    public Teams(String color, String name, String desc, String member) {
-        this.color = color;
+    public Teams(int image, String name, String desc, String member) {
+        this.image = image;
         this.name = name;
         this.desc = desc;
         this.member = member;
     }
 
-    public String getColor() {
-        return color;
+    public int getImage() {
+        return image;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setImage(int color) {
+        this.image = color;
     }
 
     public String getName() {

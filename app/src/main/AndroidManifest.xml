@@ -17,20 +17,13 @@
             android:exported="false" />
         <activity
             android:name=".CreateTrainingActivity"
-            android:exported="true"
+            android:exported="false"
             >
 
 
         </activity>
         <activity
             android:name=".Splash_Activity"
-            android:exported="true">
-
-
-
-        </activity>
-        <activity
-            android:name=".Register_Activity"
             android:exported="true">
 
             <intent-filter>
@@ -41,6 +34,15 @@
 
         </activity>
         <activity
+            android:name=".Register_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".TrainingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Login_Activity"
             android:exported="false" />
         <activity
@@ -48,10 +50,19 @@
             android:exported="false" />
         <activity
             android:name=".TeamViewCoach"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".TeamsViewPlayer"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
+        <activity
+            android:name=".CreateEventActivity"
+            android:exported="false"
+            >
+
+
+        </activity>
         <activity
             android:name=".ProfileActivity"
             android:exported="true">
