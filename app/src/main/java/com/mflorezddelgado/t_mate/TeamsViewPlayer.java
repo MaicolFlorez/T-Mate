@@ -1,5 +1,6 @@
 package com.mflorezddelgado.t_mate;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,7 +42,7 @@ public class TeamsViewPlayer extends AppCompatActivity {
         imgUnirse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                popupWindow.showAtLocation(view, Gravity.TOP, 0, 250);
+                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
             }
         });
 
@@ -62,7 +63,7 @@ public class TeamsViewPlayer extends AppCompatActivity {
         imgGoMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TeamsViewPlayer.this, TeamViewCoach.class));
+                startActivity(new Intent(TeamsViewPlayer.this, CreateEventActivity.class));
             }
         });
 
@@ -83,14 +84,14 @@ public class TeamsViewPlayer extends AppCompatActivity {
 
     public void initP(){
         elements = new ArrayList<>();
-        elements.add(new Teams("#775447", "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams("#775227", "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams("#775447", "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams("#775227", "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams("#775447", "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams("#775227", "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams("#775447", "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams("#775227", "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.calendario, "Sos", "Futbol", "Directivo"));
+        elements.add(new Teams(R.drawable.ic_launcher_background, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.casa_de_perro, "Sos", "Futbol", "Directivo"));
+        elements.add(new Teams(R.drawable.grupo, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.ic_launcher_foreground, "Sos", "Futbol", "Directivo"));
+        elements.add(new Teams(R.drawable.icono_tmate, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.pesa, "Sos", "Futbol", "Directivo"));
+        elements.add(new Teams(R.drawable.usuario, "Mogus", "Fuchibol", "Crewmate"));
 
         ListAdapter listAdapter = new ListAdapter(elements,this);
         RecyclerView recyclerView =findViewById(R.id.listTeamsView);

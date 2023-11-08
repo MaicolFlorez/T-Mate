@@ -53,7 +53,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
         }
 
         void bindData(final Teams item){
-            iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
+            iconImage.setImageResource(item.getImage());
             name.setText(item.getName());
             desc.setText(item.getDesc());
             member.setText(item.getMember());
