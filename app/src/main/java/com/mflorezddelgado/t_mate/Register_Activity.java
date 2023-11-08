@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -86,25 +87,29 @@ public class Register_Activity extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(emailUser, passUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                String id = mAuth.getCurrentUser().getUid();
+                //String id = mAuth.getCurrentUser().getUid();
                 Map<String, Object> map = new HashMap<>();
-                map.put("id", id);
+               // map.put("id", id);
                 map.put("email", emailUser);
                 map.put("password", passUser);
 
-                firestore.collection("User").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+                firestore.collection("User").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
-                    public void onSuccess(Void unused) {
+                    public void onSuccess(DocumentReference documentReference) {
                         finish();
                         startActivity(new Intent(Register_Activity.this, Login_Activity.class));
                         Toast.makeText(Register_Activity.this, "Usuario registrado", Toast.LENGTH_SHORT).show();
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(Register_Activity.this, "Error al guardar usuario", Toast.LENGTH_SHORT).show();
+
                     }
                 });
+
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -113,6 +118,5 @@ public class Register_Activity extends AppCompatActivity {
             }
         });
     }
-
 
 }
