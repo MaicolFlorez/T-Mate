@@ -70,7 +70,7 @@ public class Register_Activity extends AppCompatActivity {
                     Toast.makeText(Register_Activity.this, "Debe completar todos los datos.", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    if (passUser==cPassUser){
+                    if (passUser.equals(cPassUser)){
                         registerUser(emailUser, passUser);
                         Intent Log = new Intent(Register_Activity.this,Login_Activity.class);
                         startActivity(Log);
