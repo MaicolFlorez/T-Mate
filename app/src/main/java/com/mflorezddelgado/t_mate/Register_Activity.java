@@ -55,8 +55,6 @@ public class Register_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 //AUTH
                 String emailUser = reg_email.getText().toString().trim();
                 String passUser = reg_passw.getText().toString().trim();
@@ -70,7 +68,7 @@ public class Register_Activity extends AppCompatActivity {
                     Toast.makeText(Register_Activity.this, "Debe completar todos los datos.", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    if (passUser.equals(cPassUser)){
+                    if (cPassUser.equals(passUser)){
                         registerUser(emailUser, passUser);
                         Intent Log = new Intent(Register_Activity.this,Login_Activity.class);
                         startActivity(Log);
