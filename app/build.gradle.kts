@@ -41,4 +41,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     //implementacion para la imagen redodna
     implementation("de.hdodenhof:circleimageview:3.0.1")
+    //Implementacion fireabse auth
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation("com.google.firebase:firebase-auth")
 }

@@ -5,10 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class ProfileActivity extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +25,8 @@ public class ProfileActivity extends AppCompatActivity {
         ImageView imgGoToMenu = findViewById(R.id.img_home_foot);
         ImageView imgGoToTeam = findViewById(R.id.img_myteam_foot);
         ImageView imgGoToProfile = findViewById(R.id.img_profile_foot);
+        Button btnCerrarSesion = findViewById(R.id.btn_cerrarsesion);
+        mAuth = FirebaseAuth.getInstance();
 
         imgGoToEvents.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,5 +61,18 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(ProfileActivity.this, ProfileActivity.class));
             }
         });
+
+
+        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                finish();
+                startActivity(new Intent(ProfileActivity.this,Main_Activity.class));
+
+            }
+        });
+
+
     }
 }
