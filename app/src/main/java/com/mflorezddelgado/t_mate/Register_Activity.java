@@ -54,8 +54,7 @@ public class Register_Activity extends AppCompatActivity {
         RResgister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Log = new Intent(Register_Activity.this,Login_Activity.class);
-                startActivity(Log);
+
 
 
                 //AUTH
@@ -73,6 +72,8 @@ public class Register_Activity extends AppCompatActivity {
                 else{
                     if (passUser==cPassUser){
                         registerUser(emailUser, passUser);
+                        Intent Log = new Intent(Register_Activity.this,Login_Activity.class);
+                        startActivity(Log);
                     }else{
                         Toast.makeText(Register_Activity.this, "Las constraseñas no concuerdan", Toast.LENGTH_SHORT).show();
                     }
