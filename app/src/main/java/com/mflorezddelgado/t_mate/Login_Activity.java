@@ -38,9 +38,6 @@ public class Login_Activity extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login_Activity.this, TeamViewCoach.class);
-                startActivity(intent);
-
                 String emailUser = log_email.getText().toString().trim();
                 String passUser = log_passw.getText().toString().trim();
 
@@ -48,9 +45,13 @@ public class Login_Activity extends AppCompatActivity {
                 if (emailUser.isEmpty() && passUser.isEmpty()){
                     Toast.makeText(Login_Activity.this, "Debe completar todos los datos.", Toast.LENGTH_SHORT).show();
                 }else{
+                    Toast.makeText(Login_Activity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
                     loginUser(emailUser, passUser);
 
+                    Intent intent = new Intent(Login_Activity.this, TeamViewCoach.class);
+                    startActivity(intent);
                 }
+
 
             }
         });
