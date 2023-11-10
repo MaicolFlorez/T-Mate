@@ -63,7 +63,7 @@ public class TeamsViewPlayer extends AppCompatActivity {
         imgGoMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TeamsViewPlayer.this, CreateEventActivity.class));
+                startActivity(new Intent(TeamsViewPlayer.this, TeamViewCoach.class));
             }
         });
 
