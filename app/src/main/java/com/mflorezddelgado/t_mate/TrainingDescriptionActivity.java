@@ -40,7 +40,7 @@ public class TrainingDescriptionActivity extends AppCompatActivity {
         imgGoToTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TrainingDescriptionActivity.this, ProfileActivity.class));
+                startActivity(new Intent(TrainingDescriptionActivity.this, TrainingsActivity.class));
             }
         });
 

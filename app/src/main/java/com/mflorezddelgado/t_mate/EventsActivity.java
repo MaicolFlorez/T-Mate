@@ -38,7 +38,7 @@ public class EventsActivity extends AppCompatActivity {
         imgGoToTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(EventsActivity.this, ProfileActivity.class));
+                startActivity(new Intent(EventsActivity.this, TrainingsActivity.class));
             }
         });
 
