@@ -89,7 +89,7 @@ public class Register_Activity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 //String id = mAuth.getCurrentUser().getUid();
                 Map<String, Object> map = new HashMap<>();
-               // map.put("id", id);
+                //map.put("id", id);
                 map.put("email", emailUser);
                 map.put("password", passUser);
 
