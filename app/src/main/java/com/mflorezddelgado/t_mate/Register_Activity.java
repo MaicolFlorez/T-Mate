@@ -65,8 +65,8 @@ public class Register_Activity extends AppCompatActivity {
                 String userAge = reg_age.getText().toString().trim();
 
 
-                if (emailUser.isEmpty() && passUser.isEmpty() && cPassUser.isEmpty() && userName.isEmpty() && userLastName.isEmpty() && userAge.isEmpty()){
-                    Toast.makeText(Register_Activity.this, "Debe completar todos los datos.", Toast.LENGTH_SHORT).show();
+                if (emailUser.isEmpty() || passUser.isEmpty() || cPassUser.isEmpty()){
+                    Toast.makeText(Register_Activity.this, "Debe completar por lo menos el email y la contraseña.", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     if (cPassUser.equals(passUser)){
