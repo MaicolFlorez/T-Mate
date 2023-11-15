@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
-    private List<Teams> mData;
+public class MyTrainings extends RecyclerView.Adapter<MyTrainings.ViewHolder>{
+    private List<Entrenamiento> mData;
     private LayoutInflater mInflater;
     private Context context;
 
-    public ListAdapter(List<Entrenamiento> itemList, Context context){
+    public MyTrainings(List<Entrenamiento> itemList, Context context){
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = itemList;
@@ -26,35 +26,34 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
     public int getItemCount(){return mData.size();}
 
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public MyTrainings.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = mInflater.inflate(R.layout.list_teams, null);
-        return new ListAdapter.ViewHolder(view);
+        return new MyTrainings.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ListAdapter.ViewHolder holder, final int position){
+    public void onBindViewHolder(final MyTrainings.ViewHolder holder, final int position){
         holder.bindData(mData.get(position));
     }
 
-    public void setItems(List<Teams> items){ mData = items;}
+    public void setItems(List<Entrenamiento> items){ mData = items;}
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
-        TextView name, desc, member;
+        TextView Titulo, Desc, Carac;
 
         ViewHolder(View itemView){
             super(itemView);
             iconImage = itemView.findViewById(R.id.IconImageView);
-            name = itemView.findViewById(R.id.nameTeam);
-            desc = itemView.findViewById(R.id.descTeam);
-            member = itemView.findViewById(R.id.memberTeam);
+            Titulo = itemView.findViewById(R.id.nameTeam);
+            Desc = itemView.findViewById(R.id.descTeam);
+            Carac = itemView.findViewById(R.id.memberTeam);
         }
 
-        void bindData(final Teams item){
-            iconImage.setImageResource(item.getImage());
-            name.setText(item.getName());
-            desc.setText(item.getDesc());
-            member.setText(item.getMember());
+        void bindData(final Entrenamiento item){
+            Titulo.setText(item.getTitulo());
+            Desc.setText(item.getDescripcion());
+            Carac.setText(item.getCaracteristicas());
         }
     }
 

@@ -1,6 +1,8 @@
 package com.mflorezddelgado.t_mate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +10,11 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class TrainingsActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+public class TrainingsActivity extends AppCompatActivity {
+    List<Entrenamiento> elements;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,5 +67,22 @@ public class TrainingsActivity extends AppCompatActivity {
                 startActivity(new Intent(TrainingsActivity.this, ProfileActivity.class));
             }
         });
+    }
+    public void initC(){
+        elements = new ArrayList<>();
+        elements.add(new Entrenamiento( "PIBE", "Fuchibol", "Crewmate"));
+        elements.add(new Entrenamiento( "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Entrenamiento( "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Entrenamiento( "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Entrenamiento( "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Entrenamiento( "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Entrenamiento( "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Entrenamiento( "Mogus", "Fuchibol", "Crewmate"));
+
+        ListAdapter listAdapter = new ListAdapter(elements,this);
+        RecyclerView recyclerView =findViewById(R.id.listTeamsView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(listAdapter);
     }
 }
