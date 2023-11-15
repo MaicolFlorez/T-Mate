@@ -42,16 +42,11 @@ public class Login_Activity extends AppCompatActivity {
                 String passUser = log_passw.getText().toString().trim();
 
 
-                if (emailUser.isEmpty() && passUser.isEmpty()){
+                if (emailUser.isEmpty() || passUser.isEmpty()){
                     Toast.makeText(Login_Activity.this, "Debe completar todos los datos.", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(Login_Activity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
                     loginUser(emailUser, passUser);
-
-                    Intent intent = new Intent(Login_Activity.this, TeamViewCoach.class);
-                    startActivity(intent);
                 }
-
 
             }
         });
@@ -72,7 +67,10 @@ public class Login_Activity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     finish();
                     startActivity(new Intent(Login_Activity.this, TeamsViewPlayer.class));
+                    //Intent intent = new Intent(Login_Activity.this, TeamViewCoach.class);
+                    //startActivity(intent);
                     Toast.makeText(Login_Activity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+
                 }else{
                     Toast.makeText(Login_Activity.this, "Error", Toast.LENGTH_SHORT).show();
                 }
@@ -85,6 +83,8 @@ public class Login_Activity extends AppCompatActivity {
         });
     }
 
+
+    //Confirma si el usuario inició sesión anteriormente. En caso verdadero, inicia sesión automaticamente
     @Override
     protected void onStart() {
         super.onStart();
