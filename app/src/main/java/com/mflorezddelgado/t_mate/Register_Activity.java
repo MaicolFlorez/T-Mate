@@ -64,13 +64,34 @@ public class Register_Activity extends AppCompatActivity {
                 String userLastName = reg_lastname.getText().toString().trim();
                 String userAge = reg_age.getText().toString().trim();
 
+                //Info basica del usuario
+                UsersData nuevoUsuario = new UsersData();
+                nuevoUsuario.setEmail(emailUser);
+                nuevoUsuario.setName(userName);
+                nuevoUsuario.setLastname(userLastName);
+                nuevoUsuario.setAge(Integer.parseInt(userAge));
 
-                if (emailUser.isEmpty() || passUser.isEmpty() || cPassUser.isEmpty()){
+
+                if (emailUser.isEmpty() || passUser.isEmpty() || cPassUser.isEmpty() || userName.isEmpty() || userLastName.isEmpty() || userAge.isEmpty()){
                     Toast.makeText(Register_Activity.this, "Debe completar por lo menos el email y la contraseña.", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     if (cPassUser.equals(passUser)){
                         registerUser(emailUser, passUser);
+
+                        //Crear información del usuario en la base de datos
+                        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+                        firestore.collection("UserData").add(nuevoUsuario).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentReference> task) {
+                                if (task.isSuccessful()){
+                                    Toast.makeText(Register_Activity.this, "Se creó el registro", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Register_Activity.this, task.getException().toString() , Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
                         Intent Log = new Intent(Register_Activity.this,Login_Activity.class);
                         startActivity(Log);
                     }else{
@@ -91,7 +112,7 @@ public class Register_Activity extends AppCompatActivity {
                 Map<String, Object> map = new HashMap<>();
                 //map.put("id", id);
                 map.put("email", emailUser);
-                map.put("password", passUser);
+                map.put("password", passUser); //Temporal hasta la finalizar la app
 
                 firestore.collection("User").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -99,7 +120,6 @@ public class Register_Activity extends AppCompatActivity {
                         finish();
                         startActivity(new Intent(Register_Activity.this, Login_Activity.class));
                         Toast.makeText(Register_Activity.this, "Usuario registrado", Toast.LENGTH_SHORT).show();
-
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -108,8 +128,6 @@ public class Register_Activity extends AppCompatActivity {
 
                     }
                 });
-
-
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
