@@ -85,5 +85,6 @@ public class CreateEventActivity extends AppCompatActivity {
                 }
             }
         });
+        startActivity(new Intent(CreateEventActivity.this, EventsActivity.class));
     }
 }

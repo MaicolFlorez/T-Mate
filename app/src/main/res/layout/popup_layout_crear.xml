@@ -23,8 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:ems="10"
+        android:hint="Nombre"
         android:inputType="text"
-        android:text="Nombre" />
+        android:textColor="@color/fifth"
+        android:textColorHighlight="@color/fifth"
+        android:textColorHint="@color/fifth" />
 
     <EditText
         android:id="@+id/ed_text_team_desc"
@@ -32,8 +35,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:ems="10"
+        android:hint="Descripción"
         android:inputType="text"
-        android:text="Descripción" />
+        android:textColor="@color/fifth"
+        android:textColorHighlight="@color/fifth"
+        android:textColorHint="@color/fifth" />
 
     <EditText
         android:id="@+id/ed_text_team_membertype"
@@ -41,8 +47,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:ems="10"
+        android:hint="Tipo de miembro"
         android:inputType="text"
-        android:text="Descripción" />
+        android:textColor="@color/fifth"
+        android:textColorHighlight="@color/fifth"
+        android:textColorHint="@color/fifth" />
 
     <Button
         android:id="@+id/btn_popup_crear"

@@ -64,8 +64,9 @@
                 android:ems="10"
                 android:hint="Título ejercicio"
                 android:inputType="text"
-                android:textColor="@color/fourth"
-                android:textColorHint="@color/fifth"
+                android:textColor="@color/fifth"
+                android:textColorHighlight="@color/fifth"
+                android:textColorHint="@color/fourth"
                 android:textColorLink="@color/fourth" />
 
             <EditText
@@ -77,6 +78,8 @@
                 android:gravity="start|top"
                 android:hint="Descripción"
                 android:inputType="textMultiLine"
+                android:textColor="@color/fifth"
+                android:textColorHighlight="@color/fifth"
                 android:textColorHint="@color/fourth" />
 
             <EditText
@@ -88,6 +91,8 @@
                 android:gravity="start|top"
                 android:hint="Caracteristicas"
                 android:inputType="textMultiLine"
+                android:textColor="@color/fifth"
+                android:textColorHighlight="@color/fifth"
                 android:textColorHint="@color/fourth" />
 
             <Button

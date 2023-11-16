@@ -11,13 +11,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -122,6 +128,7 @@ public class TeamViewCoach extends AppCompatActivity {
         recyclerView.setAdapter(listAdapter);
 
         EventChangerListener();
+
     }
 
     private void EventChangerListener() {
@@ -165,6 +172,27 @@ public class TeamViewCoach extends AppCompatActivity {
     }*/
 
     //Creación de equipos
+
+
+
+   /* public void clickGuardarEquipo(View view){
+        Teams nuevoEquipo = new Teams();
+        nuevoEquipo.setName(etNombre.getText().toString());
+        nuevoEquipo.setDesc(etDesc.getText().toString());
+        nuevoEquipo.setMember(etMember.getText().toString());
+
+        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+        firestore.collection("Teams").add(nuevoEquipo).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentReference> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(TeamViewCoach.this, "Se guardó el equipo", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(TeamViewCoach.this, task.getException().toString() , Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }*/
 
 
 }

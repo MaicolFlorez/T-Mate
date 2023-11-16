@@ -87,5 +87,6 @@ public class CreateTrainingActivity extends AppCompatActivity {
                 }
             }
         });
+        startActivity(new Intent(CreateTrainingActivity.this, TrainingsActivity.class));
     }
 }
