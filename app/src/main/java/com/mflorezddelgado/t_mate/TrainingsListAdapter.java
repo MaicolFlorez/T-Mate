@@ -40,6 +40,7 @@ public class TrainingsListAdapter extends RecyclerView.Adapter<TrainingsListAdap
 
     @Override
     public int getItemCount() {
+
         return trainingList.size();
     }
 

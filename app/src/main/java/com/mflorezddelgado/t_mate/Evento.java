@@ -1,8 +1,8 @@
 package com.mflorezddelgado.t_mate;
 
 public class Evento {
-    private String asunto;
-    private String descripcion;
+    public String asunto;
+    public String descripcion;
 
     public Evento(String asunto, String descripcion) {
         this.asunto = asunto;
