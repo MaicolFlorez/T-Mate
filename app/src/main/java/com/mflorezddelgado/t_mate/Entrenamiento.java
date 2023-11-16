@@ -2,9 +2,9 @@ package com.mflorezddelgado.t_mate;
 
 public class Entrenamiento {
 
-    private String titulo;
-    private String descripcion;
-    private String caracteristicas;
+    public String titulo;
+    public String descripcion;
+    public String caracteristicas;
 
     public Entrenamiento(String titulo, String descripcion, String caracteristicas) {
         this.titulo = titulo;

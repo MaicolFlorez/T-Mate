@@ -27,7 +27,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.TeamsViewHolde
     @NonNull
     @Override
     public ListAdapter.TeamsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
         View v = LayoutInflater.from(context).inflate(R.layout.list_teams,parent,false);
 
         return new TeamsViewHolder(v);
@@ -40,7 +39,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.TeamsViewHolde
         holder.nameTeam.setText(teams.name);
         holder.descTeam.setText(teams.desc);
         holder.memberTeam.setText(teams.member);
-
     }
 
     @Override
@@ -49,7 +47,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.TeamsViewHolde
     }
 
     public static class TeamsViewHolder extends RecyclerView.ViewHolder{
-
         TextView nameTeam, descTeam, memberTeam;
         public TeamsViewHolder(@NonNull View itemView) {
             super(itemView);
