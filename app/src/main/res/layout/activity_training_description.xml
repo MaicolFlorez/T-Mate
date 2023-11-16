@@ -51,7 +51,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="top|left"
-                tools:srcCompat="@drawable/ic_launcher_foreground" />
+                tools:srcCompat="@drawable/arrowhead_left_512" />
 
             <ImageView
                 android:id="@+id/img_create_exercise"
@@ -59,7 +59,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginVertical="20dp"
-                android:src="@drawable/ic_launcher_foreground" />
+                android:src="@drawable/pesas" />
 
             <TextView
                 android:id="@+id/textView4"

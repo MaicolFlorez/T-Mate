@@ -1,11 +1,16 @@
 package com.mflorezddelgado.t_mate;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,19 +18,36 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class TeamViewCoach extends AppCompatActivity {
 
-    List<Teams> elements;
+    RecyclerView recyclerView;
+    ArrayList<Teams> teamsList;
+    ListAdapter listAdapter;
+
+    FirebaseFirestore db;
+
+    //List<Teams> elements;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_view_coach);
 
-        initC();
+
+        //initC();
 
         Button btnCrear = findViewById(R.id.btn_crear);
         Button btnUnirse = findViewById(R.id.btn_unirse);
@@ -89,23 +111,61 @@ public class TeamViewCoach extends AppCompatActivity {
                 startActivity(new Intent(TeamViewCoach.this, ProfileActivity.class));
             }
         });
+
+        recyclerView = findViewById(R.id.listTeamsView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        db = FirebaseFirestore.getInstance();
+        teamsList = new ArrayList<Teams>();
+        listAdapter = new ListAdapter(teamsList,this);
+
+        recyclerView.setAdapter(listAdapter);
+
+        EventChangerListener();
     }
 
-    public void initC(){
+    private void EventChangerListener() {
+        db.collection("Teams").orderBy("name", Query.Direction.ASCENDING)
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                if (error != null){
+                    Log.e("Error de Firestore",error.getMessage());
+                    return;
+                }
+
+                for (DocumentChange dc : value.getDocumentChanges()){
+                    if (dc.getType() == DocumentChange.Type.ADDED){
+                        teamsList.add(dc.getDocument().toObject(Teams.class));
+                    }
+
+                    listAdapter.notifyDataSetChanged();
+                }
+            }
+        });
+    }
+
+    /*public void initC(){
         elements = new ArrayList<>();
-        elements.add(new Teams(R.drawable.calendario, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.casa_de_perro, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.grupo, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.ic_launcher_background, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.ic_launcher_foreground, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.icono_tmate, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.pesa, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.usuario, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equi, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equip, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipo, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipos, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipose, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equi, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipo, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equip, "Mogus", "Fuchibol", "Crewmate"));
 
         ListAdapter listAdapter = new ListAdapter(elements,this);
         RecyclerView recyclerView =findViewById(R.id.listTeamsView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
-    }
+    }*/
+
+    //Creación de equipos
+
+
 }

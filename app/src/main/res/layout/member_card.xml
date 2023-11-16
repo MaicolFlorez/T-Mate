@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/lt"
+    android:id="@+id/memberCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
@@ -47,26 +47,26 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvNameTeam"
+                    android:id="@+id/memberName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
-                    android:text="SOS"
+                    android:text="Nombre"
                     android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvDescTeam"
+                    android:id="@+id/memberLastname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="mogus"
+                    android:text="Apellido"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tvMemberTeam"
+                android:id="@+id/memberType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -74,7 +74,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
-                android:text="Entrenador"
+                android:text="Jugador"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>

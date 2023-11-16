@@ -19,7 +19,7 @@ import java.util.List;
 
 public class TeamsViewPlayer extends AppCompatActivity {
 
-    List<Teams> elements;
+    ArrayList<Teams> elements;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,14 +84,14 @@ public class TeamsViewPlayer extends AppCompatActivity {
 
     public void initP(){
         elements = new ArrayList<>();
-        elements.add(new Teams(R.drawable.calendario, "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams(R.drawable.ic_launcher_background, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.casa_de_perro, "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams(R.drawable.grupo, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.ic_launcher_foreground, "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams(R.drawable.icono_tmate, "Mogus", "Fuchibol", "Crewmate"));
-        elements.add(new Teams(R.drawable.pesa, "Sos", "Futbol", "Directivo"));
-        elements.add(new Teams(R.drawable.usuario, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equi, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equip, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipo, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipos, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipose, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equi, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equipo, "Mogus", "Fuchibol", "Crewmate"));
+        elements.add(new Teams(R.drawable.equip, "Mogus", "Fuchibol", "Crewmate"));
 
         ListAdapter listAdapter = new ListAdapter(elements,this);
         RecyclerView recyclerView =findViewById(R.id.listTeamsView);

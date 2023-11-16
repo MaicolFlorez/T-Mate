@@ -67,6 +67,8 @@ public class CreateEventActivity extends AppCompatActivity {
             }
         });
     }
+
+
     public void clickGuardarEvento(View view){
         Evento nuevoEvento = new Evento();
         nuevoEvento.setAsunto(etAsunto.getText().toString());

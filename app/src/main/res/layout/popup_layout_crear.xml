@@ -24,10 +24,28 @@
         android:layout_margin="15dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
+        android:text="Nombre" />
+
+    <EditText
+        android:id="@+id/ed_text_team_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Descripción" />
+
+    <EditText
+        android:id="@+id/ed_text_team_membertype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Descripción" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_popup_crear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"

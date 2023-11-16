@@ -8,6 +8,10 @@ public class Teams {
     public String desc;
     public String member;
 
+    public Teams(){
+
+    }
+
     public Teams(int image, String name, String desc, String member) {
         this.image = image;
         this.name = name;

@@ -7,55 +7,55 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
-    private List<Teams> mData;
-    private LayoutInflater mInflater;
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.TeamsViewHolder>{
+    private ArrayList<Teams> teamsList;
+    //private LayoutInflater mInflater;
     private Context context;
 
-    public ListAdapter(List<Teams> itemList, Context context){
-        this.mInflater = LayoutInflater.from(context);
+    public ListAdapter(ArrayList<Teams> teamsList, Context context) {
+        this.teamsList = teamsList;
         this.context = context;
-        this.mData = itemList;
+    }
+
+
+    @NonNull
+    @Override
+    public ListAdapter.TeamsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        View v = LayoutInflater.from(context).inflate(R.layout.list_teams,parent,false);
+
+        return new TeamsViewHolder(v);
     }
 
     @Override
-    public int getItemCount(){return mData.size();}
+    public void onBindViewHolder(@NonNull ListAdapter.TeamsViewHolder holder, int position) {
+        Teams teams = teamsList.get(position);
 
-    @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = mInflater.inflate(R.layout.list_teams, null);
-        return new ListAdapter.ViewHolder(view);
+        holder.nameTeam.setText(teams.name);
+        holder.descTeam.setText(teams.desc);
+        holder.memberTeam.setText(teams.member);
+
     }
 
     @Override
-    public void onBindViewHolder(final ListAdapter.ViewHolder holder, final int position){
-        holder.bindData(mData.get(position));
+    public int getItemCount() {
+        return teamsList.size();
     }
 
-    public void setItems(List<Teams> items){ mData = items;}
+    public static class TeamsViewHolder extends RecyclerView.ViewHolder{
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView iconImage;
-        TextView name, desc, member;
-
-        ViewHolder(View itemView){
+        TextView nameTeam, descTeam, memberTeam;
+        public TeamsViewHolder(@NonNull View itemView) {
             super(itemView);
-            iconImage = itemView.findViewById(R.id.IconImageView);
-            name = itemView.findViewById(R.id.nameTeam);
-            desc = itemView.findViewById(R.id.descTeam);
-            member = itemView.findViewById(R.id.memberTeam);
-        }
-
-        void bindData(final Teams item){
-            iconImage.setImageResource(item.getImage());
-            name.setText(item.getName());
-            desc.setText(item.getDesc());
-            member.setText(item.getMember());
+            nameTeam = itemView.findViewById(R.id.tvNameTeam);
+            descTeam = itemView.findViewById(R.id.tvDescTeam);
+            memberTeam = itemView.findViewById(R.id.tvMemberTeam);
         }
     }
-
 }
