@@ -16,7 +16,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
     private LayoutInflater mInflater;
     private Context context;
 
-    public ListAdapter(List<Entrenamiento> itemList, Context context){
+    public ListAdapter(List<Teams> itemList, Context context){
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = itemList;

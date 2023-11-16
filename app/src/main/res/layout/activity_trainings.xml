@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/first"
     tools:context=".TrainingsActivity">
 
     <LinearLayout
@@ -38,7 +39,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/first"
+            android:backgroundTint="@color/first" />
     </ScrollView>
 
     <LinearLayout
@@ -55,12 +58,12 @@
             android:layout_height="75dp"
             android:layout_gravity="center"
             android:layout_marginVertical="15dp"
+            android:adjustViewBounds="true"
             android:background="#00FFFFFF"
             android:contentDescription="@string/btn_unirse"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
             android:src="@android:drawable/ic_input_add"
-            app:tint="#000000" />
+            app:tint="#184C57" />
 
         <TableLayout
             android:id="@+id/tableLayout"
@@ -135,7 +138,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Eventos" />
+                    android:text="Eventos"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -144,7 +150,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Ejercicios" />
+                    android:text="Ejercicios"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -153,7 +162,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Menú" />
+                    android:text="Menú"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -162,7 +174,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Equipo" />
+                    android:text="Equipo"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -171,7 +186,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Perfíl" />
+                    android:text="Perfíl"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
             </TableRow>
         </TableLayout>
     </LinearLayout>

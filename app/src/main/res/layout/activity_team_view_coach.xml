@@ -11,6 +11,7 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/first"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,7 +21,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:text="TextView"
+            android:text="Equipos"
+            android:textColor="@color/fifth"
+            android:textColorHighlight="@color/fifth"
+            android:textColorHint="@color/fifth"
             android:textSize="34sp" />
     </FrameLayout>
 
@@ -28,6 +32,8 @@
         android:id="@+id/listTeamsView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/first"
+        android:backgroundTint="@color/first"
         app:fastScrollEnabled="false"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +46,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/first"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -56,7 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:backgroundTint="@color/fourth"
+                android:text="Crear" />
 
             <Button
                 android:id="@+id/btn_unirse"
@@ -64,7 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:backgroundTint="@color/fourth"
+                android:text="Unirse" />
         </LinearLayout>
 
         <TableLayout
@@ -140,7 +149,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Eventos" />
+                    android:text="Eventos"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -149,7 +161,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Ejercicios" />
+                    android:text="Ejercicios"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -158,7 +173,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Menú" />
+                    android:text="Menú"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -167,7 +185,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Equipo" />
+                    android:text="Equipo"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -176,7 +197,10 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Perfíl" />
+                    android:text="Perfíl"
+                    android:textColor="@color/fifth"
+                    android:textColorHighlight="@color/fifth"
+                    android:textColorHint="@color/fifth" />
             </TableRow>
         </TableLayout>
 

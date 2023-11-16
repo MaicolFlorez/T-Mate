@@ -33,6 +33,7 @@
         android:layout_width="375dp"
         android:layout_height="509dp"
         android:layout_margin="20dp"
+        android:background="@color/first"
         android:gravity="center_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
@@ -46,7 +47,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:gravity="center"
-            android:text="Asunto" />
+            android:text="Asunto"
+            android:textColor="@color/fifth"
+            android:textColorHighlight="@color/fifth"
+            android:textColorHint="@color/fifth" />
 
         <EditText
             android:id="@+id/ed_text_titulo"
@@ -55,7 +59,10 @@
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:hint="Asunto"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black" />
 
         <TextView
             android:id="@+id/textView3"
@@ -63,7 +70,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:gravity="center"
-            android:text="Descripción" />
+            android:text="Descripción"
+            android:textColor="@color/fifth"
+            android:textColorHighlight="@color/fifth"
+            android:textColorHint="@color/fifth" />
 
         <EditText
             android:id="@+id/ed_text_descripcion"
@@ -73,7 +83,10 @@
             android:ems="10"
             android:gravity="start|top"
             android:hint="Descripción"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black" />
 
         <Button
             android:id="@+id/btn_generate_event"
@@ -83,7 +96,10 @@
             android:backgroundTint="@color/fourth"
             android:gravity="center|center_horizontal"
             android:onClick="clickGuardarEvento"
-            android:text="Generar Evento" />
+            android:text="Generar Evento"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white" />
     </LinearLayout>
 
     <TableLayout
@@ -159,7 +175,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/btn_eventos" />
+                android:text="@string/btn_eventos"
+                android:textColorHighlight="@color/fifth"
+                android:textColorHint="@color/fifth"
+                android:textColorLink="@color/fifth" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -168,7 +187,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/btn_ejercicios" />
+                android:text="@string/btn_ejercicios"
+                android:textColorHighlight="@color/fifth"
+                android:textColorHint="@color/fifth"
+                android:textColorLink="@color/fifth" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -177,7 +199,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/btn_menu" />
+                android:text="@string/btn_menu"
+                android:textColorHighlight="@color/fifth"
+                android:textColorHint="@color/fifth"
+                android:textColorLink="@color/fifth" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -186,7 +211,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/btn_equipo" />
+                android:text="@string/btn_equipo"
+                android:textColorHighlight="@color/fifth"
+                android:textColorHint="@color/fifth"
+                android:textColorLink="@color/fifth" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -195,7 +223,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/btn_perfil" />
+                android:text="@string/btn_perfil"
+                android:textColorHighlight="@color/fifth"
+                android:textColorHint="@color/fifth"
+                android:textColorLink="@color/fifth" />
         </TableRow>
     </TableLayout>
 

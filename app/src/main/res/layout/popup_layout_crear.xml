@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/first"
     android:orientation="vertical">
 
     <TextView
@@ -11,7 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:gravity="center"
-        android:text="TextView"
+        android:text="Crear Equipo"
+        android:textColor="@color/fifth"
+        android:textColorHighlight="@color/fifth"
+        android:textColorHint="@color/fifth"
         android:textSize="34sp" />
 
     <EditText
@@ -28,5 +31,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Button" />
+        android:backgroundTint="@color/fourth"
+        android:text="Crear" />
 </LinearLayout>
