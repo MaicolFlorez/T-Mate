@@ -27,6 +27,7 @@ public class CreateEventActivity extends AppCompatActivity {
         etAsunto = findViewById(R.id.ed_text_titulo);
         etDescripcion = findViewById(R.id.ed_text_descripcion);
 
+        //ImageViews para la barra de navegación
         ImageView imgGoToEvents = findViewById(R.id.img_events_foot);
         ImageView imgGoToTraining = findViewById(R.id.img_trainings_foot);
         ImageView imgGoToMenu = findViewById(R.id.img_home_foot);
@@ -70,14 +71,18 @@ public class CreateEventActivity extends AppCompatActivity {
 
 
     public void clickGuardarEvento(View view){
+        //Se crea un nuevo Evento y se obtienen sus datos
         Evento nuevoEvento = new Evento();
         nuevoEvento.setAsunto(etAsunto.getText().toString());
         nuevoEvento.setDescripcion(etDescripcion.getText().toString());
 
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+
+        //Guarda el evento en la collección "Evento" dentro de la base de datos
         firestore.collection("Evento").add(nuevoEvento).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
+                //Confirma si sí se pudo crear la instancia del evento
                 if (task.isSuccessful()){
                     Toast.makeText(CreateEventActivity.this, "Se guardó el evento", Toast.LENGTH_SHORT).show();
                 } else {
@@ -85,6 +90,7 @@ public class CreateEventActivity extends AppCompatActivity {
                 }
             }
         });
+        //Vuelve a la lista de eventos una vez ya creado
         startActivity(new Intent(CreateEventActivity.this, EventsActivity.class));
     }
 }

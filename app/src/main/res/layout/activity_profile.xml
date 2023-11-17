@@ -31,7 +31,7 @@
 
     <LinearLayout
         android:layout_width="406dp"
-        android:layout_height="557dp"
+        android:layout_height="500dp"
         android:background="@color/first"
         android:backgroundTint="@color/first"
         android:gravity="center"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
-            android:text="Nombre"
+            android:text="Carlos"
             android:textColor="@color/fifth"
             android:textSize="20sp" />
 
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="8dp"
-                    android:text="0" />
+                    android:text="20" />
 
                 <TextView
                     android:id="@+id/tv_height"
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="8dp"
-                    android:text="0" />
+                    android:text="1.70" />
 
                 <TextView
                     android:id="@+id/tv_weight"
@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="8dp"
-                    android:text="0" />
+                    android:text="65" />
 
                 <TextView
                     android:id="@+id/tv_address"
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="8dp"
-                    android:text="0" />
+                    android:text="Calle 57 #23-10" />
 
             </LinearLayout>
         </LinearLayout>

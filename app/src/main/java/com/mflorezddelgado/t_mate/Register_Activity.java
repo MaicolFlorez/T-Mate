@@ -112,7 +112,7 @@ public class Register_Activity extends AppCompatActivity {
                 Map<String, Object> map = new HashMap<>();
                 //map.put("id", id);
                 map.put("email", emailUser);
-                map.put("password", passUser); //Temporal hasta la finalizar la app
+                map.put("password", passUser); //Temporal hasta finalizar la app
 
                 firestore.collection("User").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
