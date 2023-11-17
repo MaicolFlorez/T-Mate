@@ -82,7 +82,7 @@ public class CreateEventActivity extends AppCompatActivity {
         firestore.collection("Evento").add(nuevoEvento).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
-                //Confirma si sí se pudo crear la instancia del evento
+                //Confirma si se pudo crear la instancia del evento
                 if (task.isSuccessful()){
                     Toast.makeText(CreateEventActivity.this, "Se guardó el evento", Toast.LENGTH_SHORT).show();
                 } else {
